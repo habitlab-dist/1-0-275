@@ -1,0 +1,3 @@
+window.habitlab_content_script = true;
+
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{"./src/libs_common/common_libs.ls":function(n,e){var r,t=void 0!==e&&e||this;t.sleep=r=async function(n){return new Promise(function(e){return setTimeout(e,n)})},t.once_true=async function(n,e){var t;for(t=n();!t;)t=n(),await r(100);null!=e&&e()},t.run_only_one_at_a_time=function(n){var e;return e=!1,function(){if(!e)return e=!0,n(function(){return e=!1})}},t.run_every_timeperiod=function(n,e){var r;return r=Date.now(),n(),setInterval(function(){var t;if(t=Date.now(),r+e<t)return r=t,n()},1e3)}}}]);
